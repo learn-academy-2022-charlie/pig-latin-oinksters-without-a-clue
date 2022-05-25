@@ -33,7 +33,11 @@ class App extends Component{
       })
       console.log("vowelsArray:", vowelsArray)
 
+
       // your code here!
+      //pseudocode **
+      //set up conditional statement so that if first letter of word begins with a vowel, the letters way are added to the user input word.- first function output will be word string and way added to the end of word string. second function if consonents input word will have first letter of word does not meet array condition - no vowels in index 0 so ouput will be consonent added to the end of the word along with ay. Third function quword will have user input word that begins with a q in index 0 and u in index 1 the expected output willl be the qu will be added to the end of the word then ay will be added. Fourth function will be yAsAVowel input will be a word containing  Y and the output will be y will be moved to index 0 and ay will be added to end of word. 
+
 
       // Remember: console.log is your friend :)
 
@@ -99,7 +103,7 @@ class App extends Component{
           <button onClick={this.restartGame}>Clear</button>
         </div>
         <p>{this.state.phraseTranslated}</p>
-        <footer>Coded by ~your name here~</footer>
+        <footer>Coded by ~Denise-Mary~</footer>
       </>
     )
   }
