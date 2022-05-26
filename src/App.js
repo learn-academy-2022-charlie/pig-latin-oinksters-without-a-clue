@@ -28,34 +28,51 @@ class App extends Component{
       // ACTION ITEM: use "currentWord" as a starting point for your code
       console.log("currentWord:", currentWord)
 
-      let vowelsArray = currentWord.split("").filter(consonent => {
-        return consonent === "a" || consonent === "e" || consonent === "i" || consonent === "o" || consonent === "u"
+      let vowelsArray = currentWord.split("").filter(vowel => {
+        return vowel === "a" || vowel === "e" || vowel === "i" || vowel === "o" || vowel === "u"
       })
-
-
       console.log("vowelsArray:", vowelsArray)
-if(currentWord[0] === vowelsArray[0]) {
-  console.log(currentWord + "way")
-// } else if(currentWord[0]!== vowelsArray[0]) {
+      let qIndex = currentWord.indexOf("qu")
+
+
+
+
+      if(currentWord[0] === vowelsArray[0]){
+         currentWord =currentWord +"way"
+      }
+      else if(qIndex !== -1) {
+        currentWord = currentWord.substring(qIndex + 2) + currentWord.substring(0, qIndex +2) + "ay"
+      } else  {
+        currentWord = currentWord.substring(0,(vowelsArray))+ currentWord.substring(vowelsArray) + "ay"
+      }
+      //currentWord.substring(0, qIndex +2)
+      
+        
+       
+//  } else if(currentWord[0]!== vowelsArray[0]) {
 //     let beginConst =
-}
+//  }
 
-let constanantsArray =
+//     let constanantsArray =
 
- currentWord.split("").filter(vowel => {
-  return vowel !== "a" || vowel !== "e" || vowel !== "i" || vowel !== "o" || vowel !== "u"
-  // if(constanantsArray[i] !== )
-})
+//   currentWord.split("").map(value => { 
+//   if(value  !== "a" || value !== "e" || value !== "i" || value !== "o" || value !== "u")
 
-console.log(constanantsArray)
+  
+//     return constanantsArray[i] +"ay"
+// })
+  //.filter(consonent => {
+//   return consonent !== "a" || consonent !== "e" || consonent !== "i" || consonent !== "o" || consonent !== "u"
+  
+//   // if(constanantsArray[i] !== )
+// })
 
-for(let i = 0; i < currentWord.length; i ++){
-if(currentWord[i] !== vowelsArray[0]){
+//console.log(constanantsArray)
 
-}
+ 
 
 
-}
+// }
 
 // Random ideas
   // take currentWord and turn into an array. Then split array into single character strings. Now filter and create new array beginning with vowel.
