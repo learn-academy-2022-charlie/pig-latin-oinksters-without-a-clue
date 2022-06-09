@@ -32,15 +32,71 @@ class App extends Component{
         return vowel === "a" || vowel === "e" || vowel === "i" || vowel === "o" || vowel === "u"
       })
       console.log("vowelsArray:", vowelsArray)
+      let qIndex = currentWord.indexOf("qu")
+
+
+
+
+      if(currentWord[0] === vowelsArray[0]){
+         currentWord =currentWord +"way"
+      }
+      else if(qIndex !== -1) {
+        currentWord = currentWord.substring(qIndex + 2) + currentWord.substring(0, qIndex +2) + "ay"
+      } else  {
+        currentWord = currentWord.substring(0,(vowelsArray))+ currentWord.substring(vowelsArray) + "ay"
+      }
+      //currentWord.substring(0, qIndex +2)
+      
+        
+       
+//  } else if(currentWord[0]!== vowelsArray[0]) {
+//     let beginConst =
+//  }
+
+//     let constanantsArray =
+
+//   currentWord.split("").map(value => { 
+//   if(value  !== "a" || value !== "e" || value !== "i" || value !== "o" || value !== "u")
+
+  
+//     return constanantsArray[i] +"ay"
+// })
+  //.filter(consonent => {
+//   return consonent !== "a" || consonent !== "e" || consonent !== "i" || consonent !== "o" || consonent !== "u"
+  
+//   // if(constanantsArray[i] !== )
+// })
+
+//console.log(constanantsArray)
+
+ 
+
+
+// }
+
+// Random ideas
+  // take currentWord and turn into an array. Then split array into single character strings. Now filter and create new array beginning with vowel.
+
+  // somehow add the constanants to the end and add "ay"
+
+
 
       // your code here!
+      //pseudocode **
+      //set up conditional statement so that if first letter of word begins with a vowel, the letters way are added to the user input word.-
+      // first function output will be word string and way added to the end of word string.
+      // second function if consonents input word will have first letter of word does not meet array condition - no vowels in index 0 so ouput will be consonent added to the end of the word along with ay.
+      // Third function quword will have user input word that begins with a q in index 0 and u in index 1 the expected output willl be the qu will be added to the end of the word then ay will be added. Fourth function will be yAsAVowel input will be a word containing  Y and the output will be y will be moved to index 0 and ay will be added to end of word.
+
 
       // Remember: console.log is your friend :)
 
 
       // ACTION ITEM: change the value of currentWord to the name of whatever variable you made containing your Pig Latin'd word
       return currentWord
-    })
+      })
+
+
 
 
     // joining the array back to a string of translated words
@@ -99,7 +155,7 @@ class App extends Component{
           <button onClick={this.restartGame}>Clear</button>
         </div>
         <p>{this.state.phraseTranslated}</p>
-        <footer>Coded by ~your name here~</footer>
+        <footer>Coded by ~Denise-Mary~</footer>
       </>
     )
   }
